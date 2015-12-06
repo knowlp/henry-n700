@@ -197,7 +197,7 @@ inline string TS() {
   static string weekday[] = { "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
   time( &t );
   p_ltm = localtime( &t );
-  return toString( "\33[0;34m# %02d/%02d/%04d %02d:%02d:%02d\33[0m] ", 1+p_ltm->tm_mon, p_ltm->tm_mday, 1900+p_ltm->tm_year, p_ltm->tm_hour, p_ltm->tm_min, p_ltm->tm_sec );
+  return toString( "\33[0;34m# %02d/%02d/%04d %02d:%02d:%02d\33[0m ", 1+p_ltm->tm_mon, p_ltm->tm_mday, 1900+p_ltm->tm_year, p_ltm->tm_hour, p_ltm->tm_min, p_ltm->tm_sec );
 }
 
 template <class T> bool has_intersection( const T &s1_begin, const T &s1_end, const T &s2_begin, const T &s2_end ) {
