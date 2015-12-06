@@ -1434,6 +1434,7 @@ void function::getParsedOption( command_option_t *p_out_opt, vector<string> *p_o
   while( -1 != (option = getopt( argc, argv, acceptable.c_str() )) ) {
     if( NULL == optarg ) (*p_out_opt)[ option ] = "";
     else                 (*p_out_opt)[ option ] = optarg;
+    _N("got commandline argument '" << static_cast<char>(option) << "' with value '" << (*p_out_opt)[ option ] << "'");
   }
 
   for( int i=optind; i<argc; i++ )
