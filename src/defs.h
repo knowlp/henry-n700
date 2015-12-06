@@ -60,7 +60,8 @@
 #define V(x) if( g_verbose_level >= x )
 #define E(x) cerr << "\33[0;41m * ERROR * \33[0m" << x << endl;
 #define W(x) cerr << "\33[0;41m * WARNING * \33[0m" << x << endl;
-#define _N(x) cerr << "\33[1;40m" << x << "\33[0m" << endl;
+//#define _N(x) cerr << "\33[1;40m" << x << "\33[0m" << endl;
+#define _N(x) cerr << x << endl;
 
 #define _A(x, m) if(!(x)) { E(m); throw; }
 
