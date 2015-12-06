@@ -22,3 +22,7 @@ endif
 all: $(OBJS)
 	mkdir -p ./bin
 	$(CC) $(CFLAGS) $(OBJS) $(LDFLAGS) $(OPTIONS) -o ./bin/henry
+
+clean:
+	-rm $(OBJS) bin/henry
+
